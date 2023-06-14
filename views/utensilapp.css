@@ -41,10 +41,10 @@ header{
     color: yellow;
   }
   .header-icon{
-    height: 80px;
+    height: 50px;
+    position: relative;
     background-color:transparent;
     color: white;
-    padding-right: 20px;
     border-left: white;
   }
   .header-icon:hover{
@@ -52,7 +52,7 @@ header{
     
   }
   .icon{
-    font-size: x-large;
+    font-size: large;
   }
   .fa-star{
     color: goldenrod ;
@@ -100,7 +100,7 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    width: 40%;
+    width: 85%;
     height: 100%;
     background: white;
     display: grid;
@@ -136,12 +136,13 @@ header{
   .header-icon-container{
     display: inline-flex;
     position: relative;
+    
   }
   .cart-sidebar{
     position: fixed;
     top: 0;
     right: 0;
-    width: 40%;
+    width: 85%;
     height: 100%;
     background: white;
     display: grid;
@@ -279,21 +280,8 @@ h4{
     line-height: 1.25;
     margin-bottom: 0rem;
     font-family: "roboto", sans-serif;
-    margin-top: 0.5rem;
+    margin-top: 0.2rem;
 
-}
-
-h1{
-    font-size: 3rem;
-}
-h2{
-    font-size: 2rem;
-}
-h3{
-    font-size: 1.25rem;
-}
-h4{
-    font-size: 1rem;
 }
 p{
     margin-bottom: 1rem;
@@ -306,17 +294,19 @@ section{
 menu{
     padding: 5rem 0;
 }
-.title{
+.menu-title{
     text-align: center;
-    margin-bottom: 2rem;
     color: orange;
+    display: inline;
+    margin-bottom: 10px;
 }
 .underline{
     width: 5rem;
-    height: 0.25rem;
+    height: 0.2rem;
     background-color: orange;
+    margin-right: auto;
     margin-left: auto;
-    margin-right: auto;;
+    
 }
 .section-center{
     width: 70vw;
@@ -346,7 +336,7 @@ menu{
     height: 300px;
     box-shadow: 0px 1px 3px rgba(255, 255, 255, 0.404);
     border-radius: 25px ;
-    width: 325px;
+    width: 100%;
     padding: 0;
     margin-left: auto;
     margin-right: auto;
@@ -484,11 +474,30 @@ h4.count{
         margin-bottom: 15px;
 
     }
+    
     .photo{
         height: 290px;
         width: 360px;
     }
     
+}
+@media screen and (min-width: 300px){
+  .menu-item{
+      grid-template-columns: 1fr;
+      gap: 0 1.25rem;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 1px;
+      padding: 4px;
+  }
+  
+  h2{
+    font-size: 20px;
+  }
+  .sidebar-toggle{
+    font-size: 1.5rem;
+  }
+  
 }
 
 @media screen and (min-width: 1000px){
@@ -501,7 +510,9 @@ h4.count{
         width: auto;
 
     }
-    
+    h2{
+      font-size: 45px;
+    }
     .photo{
         height: 310px;
         width: 380px;
