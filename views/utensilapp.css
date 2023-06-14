@@ -324,9 +324,9 @@ menu{
 .menu-item{
     display: grid;
     gap: 1rem 2rem;
-    max-width: 25rem;
+    max-width: 28rem;
     border: solid 1px orange;
-    padding: 10px;
+    padding: 0px;
     padding-bottom: 15px;
     
 }
@@ -477,7 +477,7 @@ h4.count{
     
     .photo{
         height: 290px;
-        width: 360px;
+        width: 370px;
     }
     
 }
