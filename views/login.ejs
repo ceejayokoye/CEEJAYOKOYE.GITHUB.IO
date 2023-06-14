@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="utensilstore.css">
+    <link rel="stylesheet" href="css/all.css">
+    <title>LOGIN</title>
+</head>
+<body>
+    <div class="img-container">
+        <div class="form-box">
+            <h1 id="sign-title">sign in</h1>
+            <form action="/login" id="signupForm" method="POST" >
+                <div class="input-group">
+       
+                    <%if (error && error.length >0){%>
+                        <div class="error-message">
+                            <%= error%>
+                        </div> 
+                         <%}%>
+                       <div class="input-field">
+                           <i class="fa-solid fa-envelope"></i>
+                           <input type="email" name="email" placeholder="email address" id="email">
+                          </div>
+       
+                          <div class="input-field">
+                           <i class="fa-solid fa-lock"></i>
+                           <input type="password" name="password" placeholder="password" id="password">
+                          </div>
+                </div>
+                <div class="btn-field">
+                    <button type="button" id="signup-btn"  onclick="redirectTOreg()">sign up</button>
+                    <button type="submit" id="signin-btn"  class="disable">sign in</button>
+                   </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function redirectTOreg() {
+            window.location.href = '/register';
+            
+        }
+    </script>
+</body>
+</html>

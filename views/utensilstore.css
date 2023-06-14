@@ -1,0 +1,152 @@
+
+
+/*
+=============== 
+Variables
+===============
+*/
+
+
+body{
+    margin: 0;
+    padding: 0;
+}
+h1,
+h2,
+h3,
+h4{
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    line-height: 1.25;
+    margin-bottom: 0rem;
+    font-family: "roboto", sans-serif;
+    margin-top: 0.5rem;
+
+}
+
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.25rem;
+}
+h4{
+    font-size: 1rem;
+}
+p{
+    margin-bottom: 1rem;
+}
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'poppins', sans-serif;
+    }
+.img-container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient( rgba(255, 166, 0, 0.644),rgba(0, 0, 0, 0.651)), url(rotatingflask.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    
+}    
+.fa-solid{
+    color: red;
+}
+
+.form-box{
+    width: 90%;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    padding: 50px 60px 70px;
+    text-align: center;
+}
+.form-box h1{
+    font-size: 30px;
+    margin-bottom: 50px;
+    color: black;
+    position: relative;
+}
+.form-box h1::after{
+    content: '';
+    width: 30px;
+    height: 4px;
+    border-radius: 3px;
+    background: orange;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translate(-50%);
+}
+        .error-message{
+    color: red;
+    background-color: rgba(0, 0, 0, 0.151);
+    font-size: small;
+    padding: 0.3;
+    margin: 0;
+    height: 15px;
+}
+.input-field#name-field{
+    padding-top: 0;
+    margin-top: 2px;
+}
+.input-field{
+    background: #eaeaea;
+    margin: 15px 0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    max-height: 65px;
+    transition: max-height 0.5s;
+    overflow: hidden;
+}
+#email,
+#text,
+#password,
+#address{
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 18px 15px;
+}
+
+.input-field i{
+    margin-left: 15px;
+    color: #999;
+}
+.btn-field{
+  margin-top: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.btn-field button{
+    flex-basis: 49%;
+    background-color: black;
+    color: orange;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    transition: background 1s;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+.input-group{
+    height: 250px;
+}
+.btn-field button.disable{
+    background-color: orange;
+    color: black;
+}

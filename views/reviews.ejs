@@ -1,0 +1,147 @@
+<head>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+<link rel="manifest" href="./favicon_io/site.webmanifest">
+  </head>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    
+    .order-header{
+      display: inline-flex;
+      box-shadow: 0px 2px 5px;
+      width: 100%;
+      padding-top: 10px;
+      height: 40px;
+      background-color: orange;
+    }
+  .arrow{
+    height: 30px;
+   margin: 1 10px;
+   border: none;
+   background-color: transparent;
+   font-size: large;
+  }
+
+  button[type="submit"]{
+    background-color:orange;
+    border: none;
+    height: 35px;
+    border-radius: 10px;
+    width: 120px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  input[type="text"]{
+    height: 30px;
+    width: 60%;
+    background-color: wheat;
+    border: none;
+    border-radius: 3px;
+  }
+  textarea{
+    background-color: wheat;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 34px;
+    color: orange;
+    
+  }
+  .comment{
+    padding: 4px;
+    height: 45%;
+    border-bottom: 2px dashed orange;
+  }
+  
+  .cm-body >h1{
+    text-align: center;
+    color: orange;
+  } 
+  .comments-header{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5px;
+    width: 100%;
+  }
+  .comment-item{
+    width: auto;
+    height: auto;
+    margin: 1px;
+    box-shadow: 1px 0.5px 5px rgba(255, 255, 0, 0.315);
+    gap: 20px;
+    place-items: center;
+    text-transform: capitalize;
+    display: inline-flex;
+  }
+  .rb{ 
+    background-color: black;
+  }
+  .cn{
+    font-size: 12px;
+  }
+  .cp{
+    font-size: 10px;
+  }
+  .cc{
+    font-size: 10px;
+  }
+  </style>
+  
+    <div>
+  <div class="order-header">
+    <a href="/">
+        <button  class="arrow">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+    </a>
+    <h2>reviews</h2>
+  </div>
+  <div class="rb">
+  <div class="comment">
+    <form action="/comment" method="post">
+        <div class="input">
+            <label for="name">NAME:</label>
+        <input type="text" name="name" id="name" placeholder="add name">
+        </div>
+        <div class="input">
+            <label for="product">PRODUCT NAME</label>
+            <input type="text" name="product" id="product" placeholder="product Name">
+        </div>
+        <div class="input">
+            <label for="text">COMMENT:</label>
+        <textarea name="comment" id="text" cols="40" rows="4"></textarea>
+        </div>
+        <div style="text-align: center;">
+            <button type="submit">post comment</button>
+        </div>
+    </form>
+  </div>
+    <div class="cm-body">
+     <h1>comments</h1>
+  <div class="comments-header">
+    <%if (comments.length >0){%>
+        <%comments.forEach(comment =>{%>
+            <div class="comment-item">
+               <div class="cn"> name: <%=comment.name%></div>
+               <div class="cp">product: <%=comment.product%></div>
+               <div class="cc">comment: <%=comment.comment%></div>
+                </div>
+            <%});%>
+            <%} else {%>
+                <p>no comment</p>
+                <%}%>
+</div>
+    </div>
+  </div>
+    </div>
+  
+  

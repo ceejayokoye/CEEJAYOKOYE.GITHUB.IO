@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="utensilapp.css">
+   <link rel="stylesheet" href="css/all.css">
+   <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+<link rel="manifest" href="./favicon_io/site.webmanifest">
+    <title>UTENSIL STORE</title>
+</head>
+<body>
+    <header>
+        <div class="sidebar-container">
+            <button class="sidebar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <button class="close-btn sidebar-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="sidebar-contents">
+                <div class="account">
+                    <div class="header-name">
+                        <b>my store account</b>
+                        <button class="next-btn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="header-contents">
+                        <button class="sidebar-btn" onclick="locateToOrders()">
+                            <i class="fas fa-shopping-cart"></i>
+                            Orders
+                        </button>
+                        <button class="sidebar-btn" onclick="locateToInbox()">
+                            <i class="fas fa-envelope"></i>
+                            Inbox
+                        </button>
+                    
+                        <button class="sidebar-btn" onclick="locateToReviews()">
+                            <i class="fas fa-comment"></i>
+                            reviews
+                        </button>
+                    </div>
+                    <div class="logout" style=" margin: 45px ; ">
+                        <form action="/logout?_method=DELETE" method ="POST">
+                            <button type="submit" 
+                             style="color: white; width: 100%; border: none; border-radius: 14px; height: 35px; background-color: red;">Log Out</button>
+                          </form>
+                    </div>
+                </div>
+                
+            </div>
+          </aside>
+
+
+
+          <div class="title">
+            <h1>
+                THE UTENSIL STORE
+                <i class="far fa-star"></i>
+
+              </h1>
+          </div>
+          <div class="header-icon-container">
+            <a href="/register">
+                <button class="header-icon ">
+                SIGN IN
+                <i class="fa fa-user icon"></i>
+              </button>
+            </a><div>
+                <button class="header-icon cart-icon" >
+                CART
+                <i class="fas fa-shopping-cart icon"></i>
+              </button>
+              <p class="order-length">2</p>
+            </div>
+          </div>
+          <aside class="cart-sidebar">
+            <div class="cart-header">
+                <button class="close-btn cart-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+                <div class="order-price">
+                    TOTAL   : CART EMPTY
+                </div>
+            
+            <div class="order">
+                
+            </div>
+            <button id="checkout">CHECKOUT</button>
+            <div class="payment">
+                <button class="close-btn close-payment ">
+                    <i class="fas fa-times"></i>
+                </button>
+                <form id="paymentForm">
+                    <div class="form-group">
+                      <label for="email">Email Address</label>
+                      <input type="email" id="email-address" required />
+                    </div>
+                    <div class="form-group">
+                      <label for="amount">Amount</label>
+                      <input type="tel" id="amount" required />
+                    </div>
+                    <div class="form-group">
+                      <label for="name">First Name</label>
+                      <input type="text" id="name" name="name" />
+                    </div>
+                    <div class="form-group">
+                      <label for="Address">Home Address</label>
+                      <input type="address" id="Address" name="address"/>
+                    </div>
+                    <div class="form-group">
+                      <label for="phone">Phone No</label>
+                      <input type="tel" id="phone" name="phone"/>
+                    </div>
+                    <div class="form-submit">
+                      <button type="submit" onclick="payWithPaystack()"> Pay </button>
+                    </div>
+                  </form>
+            </div>
+          </aside>
+    </header>
+    <main>
+        <div class="search-bar">
+                <input  type="text" name="search-bar" placeholder = " search products" id="search-bar">
+                <i class="fas fa-search"></i>
+        </div>
+
+        <section class="menu">
+            <div class="title">
+                <h2>OUR MENU</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="section-center">
+                <article class="menu-item">
+                    <div class = "photo">
+                    <img src= ./images/vegetableslicer.jpg alt=multifunctional vegetable cutter and slicer class="photo">
+                    <p class="discount"> -17%</p>
+                    <button class="save">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    </div>
+                    <div class="item-info">
+                        <div class="info-header">
+                            <h4>multifunctional vegetable cutter and slicer</h4>
+                            <div>
+                            <h4 class="CurrPrice"> ₦12,500</h4>
+                            <br>
+                              <s class="prevPrice" >₦ 15,000</s>
+                            </div>
+                        </div>
+                        <p class="item-text">
+                        A versatile kitchen tool designed to quickly and easily slice, chop and shred a wide range of vegetables and fruits    
+                        </p>
+                    </div>
+                    <button class="addCart">Add to cart</button>
+                </article>
+            </div>
+            
+        </section>
+ 
+
+    </main>
+    <footer>
+
+    </footer> 
+<script src="utensilstore.js"></script>
+<script src="https://js.paystack.co/v1/inline.js"></script> 
+</body>
+</html>
