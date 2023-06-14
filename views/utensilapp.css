@@ -293,7 +293,7 @@ section{
     
 }
 menu{
-    padding: 5rem 0;
+    padding: 50rem 0;
 }
 .menu-title{
     text-align: center;
@@ -310,8 +310,7 @@ menu{
     
 }
 .section-center{
-    width: 70vw;
-    max-width: 1170px;
+    width: 85%;
     display: grid;
     gap: 2rem 1rem;
     
