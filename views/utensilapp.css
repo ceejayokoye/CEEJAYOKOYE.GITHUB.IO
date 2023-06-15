@@ -14,9 +14,8 @@ body{
 
 header{
     width: 100%;
-    background-color: black;
     text-transform: uppercase;
-    color: orange;
+    color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,20 +30,18 @@ header{
     font-size: 2rem;
     background: transparent;
     border-color: transparent;
-    color: orange;
     transition: all 0.3s linear;
     cursor: pointer;
     animation: bounce 3s forwards infinite;
     
   }
   .sidebar-toggle:hover {
-    color: yellow;
+    transform: scale(1.2);
   }
   .header-icon{
     height: 50px;
     position: relative;
     background-color:transparent;
-    color: white;
     border:none;
 
   }
@@ -55,12 +52,9 @@ header{
   .icon{
     font-size: large;
   }
-  .fa-star{
-    color: goldenrod ;
-  }
+  
 
    .search-bar{
-    background-color: orange;
     display: flex;
     justify-content: center;
     padding: 0px;
@@ -81,9 +75,10 @@ header{
     text-align: center;
     text-transform: capitalize;
     letter-spacing: 2px;
-    border: 0;
+    border:  solid 2px;
     outline: 0;
     margin: 3px 0px ;
+    
 }
 .search-bar i{
     border-left: none;  
@@ -95,6 +90,8 @@ header{
     background-color:  rgba(255, 255, 255, 0.767);
     margin: 0px;
     cursor:pointer;
+    border: solid 2px;
+    border-left: none;
     border-radius: 0px 25px 25px 0px;
 }
 .sidebar {
@@ -158,8 +155,8 @@ header{
     display: flex;
     justify-content: center;
     place-items: center;
-    border: solid 1px orange;
-    box-shadow: 0pc 1px 2px orange;
+    border: solid 1px ;
+    box-shadow: 0pc 1px 2px black;
     border-radius: 45px;
     color: black;
     font-weight: bold;
@@ -220,7 +217,7 @@ header{
     font-size: 1.75rem;
     background: transparent;
     border-color: transparent;
-    color: orange;
+    color: black;
     cursor: pointer;
   }
 .sidebar-contents{
@@ -268,9 +265,7 @@ header{
   .show-sidebar {
     transform: translate(0);
   }
-main{
-    background-color: black;
-}
+
   
 h1,
 h2,
@@ -297,26 +292,24 @@ menu{
 }
 .menu-title{
     text-align: center;
-    color: orange;
     display: inline;
     margin-bottom: 10px;
 }
 .underline{
     width: 5rem;
     height: 0.2rem;
-    background-color: orange;
     margin-right: auto;
     margin-left: auto;
-    
+    background-color: black;
 }
 .section-center{
-    width: 85%;
+    width: 100%;
     display: grid;
     gap: 2rem 1rem;
     
 }
 .menu-item:hover{
-    box-shadow: 0px 1px 5px orange;
+    box-shadow: 0px 1px 5px black;
     transform: scale(1.02);
     transition: 1.5s;
 }
@@ -325,10 +318,9 @@ menu{
     display: grid;
     gap: 1rem 2rem;
     max-width: 28rem;
-    border: solid 1px orange;
-    padding: 0px;
+    border: solid 1px black;
     padding-bottom: 15px;
-    
+    box-shadow: 1px 2px 5px black;
 }
 
 
@@ -354,27 +346,15 @@ menu{
     right: 8px;
     
 }
-.save{
-  position:absolute;
-  z-index: 2;
-  color: orange;
- background-color: transparent;
-  font-size: 25px;
-  margin: 10px;
-  bottom: 0;
-  left: 0;
-  border: none;
-  font-weight: bold;
-} 
+
  .info-header {
     display: flex;
     justify-content: space-between;
-    border-bottom: 0.5px dotted orange;
-    color: rgba(228, 150, 4, 0.993);
+    border-bottom: 0.5px dotted black;
     gap: 5px;
 }
 s{
-    color: white;
+    color: rgba(8, 8, 8, 0.555);
     font-size: 15px;
 }
 .price{
@@ -386,30 +366,21 @@ s{
 }
 .item-text{
     font-weight: bold;
-    color: orange;
+    font-size: 14px;
     margin-bottom: 3px;
 }
 .addCart{
-    background-color: orange;
-    color: black;
+    background-color: darkorange;
+    color: white;
     border-radius: 10px;
-    border: solid 3px black;
+    border: none;
     height: 40px;
     font-size: large;
     text-transform: uppercase;
 }
-.counter{
-    color: black;
-    background-color: orange;
-    width: 12%;
-    margin-right: 9px;
-    border: none;
-    border-radius: 10px;
-    font-weight: bolder;
-    width: 25px;
-}
+
 #checkout{
-    background-color: orange;
+    background-color: darkorange;
     color: black;
     border-radius: 10px;
     border: solid 3px rgba(0, 0, 0, 0.219);
@@ -422,17 +393,21 @@ s{
 .payment{
 position: absolute;
 top: 100px;
-background-color: black;
+background-color: white;
+width: 100%;
 display: none;
 }
 .form-submit>button{
-  margin: 5px;
-  width: 100px;
+ margin-left: 25%;
+  width: 50%;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  position: relative;
   height: 30px;
-  background-color: orange;
+  background-color: darkorange;
   font-size: 20px;
   font-weight: bold;
-  margin-left: 50px;
+  border: none;
 }
 input{
   height: 30px;
@@ -443,7 +418,6 @@ input{
 label{
   font-size: large;
   font-weight: bold;
-  color: orange;
 }
 .form-group{
   display: flex;
